@@ -20,6 +20,30 @@
     font-size: 1rem;
 }
 
+.register>div {
+    display: flex;
+}
+.register>div>label {
+    border-radius: 8px;
+    border: 2px solid #dddfe2;
+    outline: none;
+    color: #1d2129;
+    margin: 1rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 70%;
+    font-size: 1rem;
+}
+.register>div>select {
+    border-radius: 8px;
+    border: 2px solid #5e92e0;
+    outline: none;
+    color: #2ebdbd;
+    margin: 1rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 92%;
+    font-size: 1rem;
+}
+
 .register>.button {
     background: #1877f2;
     border: 1px solid #1877f2;

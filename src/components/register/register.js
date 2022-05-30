@@ -43,7 +43,7 @@ const Register = () => {
     return (
         <div className="register">
             {console.log("User", user)}
-            <h1>Register</h1>
+            <h1>Create User Profile</h1>
             <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={handleChange}></input>
             <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={handleChange}></input>
             <input type="phone" name="contact" value={user.contact} placeholder="Contact Number" onChange={handleChange}></input>

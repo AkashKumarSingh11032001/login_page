@@ -29,10 +29,11 @@ const Register = () => {
     const register = () => {
         const { name, email, contact, course, country, password, reEnterPassword } = user
         if (name && email && contact && course && country && password && (password === reEnterPassword)) {
-            axios.post("http://localhost:3000/register", user)
+            axios.post("http://localhost:9002/register", user)
                 .then(res => {
-                    alert(res.data.message)
-                    history.push("/login")
+                    console.log(res)
+                    // alert(res.data.message)
+                    // history.push("/login")
                 })
         } else {
             alert("invlid input")
@@ -49,21 +50,21 @@ const Register = () => {
             <input type="phone" name="contact" value={user.contact} placeholder="Contact Number" onChange={handleChange}></input>
             <div>
                 <label name="course" >Course Level:</label>
-                <select id="course" name="course">
-                    <option value={user.course} onChange={handleChange}>UG</option>
-                    <option value={user.course} onChange={handleChange}>PG</option>
+                <select id="course" name="course" value={user.course} onChange={handleChange}>
+                    <option selected>UG</option>
+                    <option>PG</option>
                 </select>
             </div>
             <div>
                 <label name="country" >Country Preferences:</label>
-                <select id="country" name="country" >
-                    <option value={user.country} onChange={handleChange}>USA</option>
-                    <option value={user.country} onChange={handleChange}>Australia</option>
-                    <option value={user.country} onChange={handleChange}>New-Zealand</option>
-                    <option value={user.country} onChange={handleChange}>Canada</option>
-                    <option value={user.country} onChange={handleChange}>UK</option>
-                    <option value={user.country} onChange={handleChange}>Ireland</option>
-                    <option value={user.country} onChange={handleChange}>Germany</option>
+                <select id="country" name="country" value={user.country} onChange={handleChange} >
+                    <option selected>USA</option>
+                    <option >Australia</option>
+                    <option >New-Zealand</option>
+                    <option >Canada</option>
+                    <option >UK</option>
+                    <option >Ireland</option>
+                    <option >Germany</option>
                 </select>
             </div>
             <input type="date" name="dob" value={user.dob} placeholder="DOB" onChange={handleChange}></input>
